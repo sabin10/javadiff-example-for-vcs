@@ -1,0 +1,16 @@
+public static void main(String[] args) {
+
+        String ORIGINAL = "file1.txt";
+        String RIVISED = "file2.txt";
+        String newString;
+        String cfBoss;
+
+        List<String> original = fileToLines(ORIGINAL);
+        List<String> revised  = fileToLines(RIVISED);
+
+        Patch patch = DiffUtils.diff(original, revised);
+        int a = 2;
+
+        private static int a = 14;
+
+}

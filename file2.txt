@@ -1,0 +1,16 @@
+public static void main(String[] args) {
+
+        String ORIGINAL = "file1.txt";
+        String RIVISED = "file2.txt";
+
+        List<String> original = fileToLines(ORIGINAL);
+        List<String> revised  = fileToLines(RIVISED);
+
+        // Compute diff. Get the Patch object. Patch is the container for computed deltas.
+        Patch patch = DiffUtils.diff(original, revised);
+
+        for (Delta delta: patch.getDeltas()) {
+            System.out.println(delta);
+        }
+
+}
